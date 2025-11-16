@@ -1,432 +1,191 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>my blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="notebook">
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Airy's blog - Record every little bit</title><meta name="author" content="Airy"><meta name="copyright" content="Airy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="notebook">
 <meta property="og:type" content="website">
-<meta property="og:title" content="my blog">
+<meta property="og:title" content="Airy&#39;s blog">
 <meta property="og:url" content="https://echosnow.github.io/index.html">
-<meta property="og:site_name" content="my blog">
+<meta property="og:site_name" content="Airy&#39;s blog">
 <meta property="og:description" content="notebook">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://echosnow.github.io/img/Avatar.jpg">
 <meta property="article:author" content="Airy">
 <meta property="article:tag" content="CTF, Blog, WP, Notes">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="my blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">my blog</a>
-      </h1>
+<meta name="twitter:image" content="https://echosnow.github.io/img/Avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Airy's blog",
+  "alternateName": [
+    "Record every little bit",
+    "echosnow.github.io"
+  ],
+  "url": "https://echosnow.github.io/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://echosnow.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
       
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Record every little bit</a>
-        </h2>
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://echosnow.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-我的第一篇文章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="article-date">
-  <time class="dt-published" datetime="2025-11-16T06:00:00.000Z" itemprop="datePublished">2025-11-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%BD%9C/">写作</a>
-  </div>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-  </div>
-  <div class="article-inner">
+      const theme = saveToLocal.get('theme')
     
-    
-      <header class="article-header">
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="我的第一篇Blog"><a href="#我的第一篇Blog" class="headerlink" title="我的第一篇Blog"></a>我的第一篇Blog</h1><h2 id="参加了学校的一个网页设计大赛，技术方面全是计院的学长们做的，作为小白的我只能负责内容和素材的收集，我对这个网页设计其实是很感兴趣的，那就现从简单的个人博客开始吧，也会在这个小站上分享一些其他的笔记，但本人是键盘手残党，可能不会经常更新，下面是粘贴的Markdown语法，便于查找。"><a href="#参加了学校的一个网页设计大赛，技术方面全是计院的学长们做的，作为小白的我只能负责内容和素材的收集，我对这个网页设计其实是很感兴趣的，那就现从简单的个人博客开始吧，也会在这个小站上分享一些其他的笔记，但本人是键盘手残党，可能不会经常更新，下面是粘贴的Markdown语法，便于查找。" class="headerlink" title="参加了学校的一个网页设计大赛，技术方面全是计院的学长们做的，作为小白的我只能负责内容和素材的收集，我对这个网页设计其实是很感兴趣的，那就现从简单的个人博客开始吧，也会在这个小站上分享一些其他的笔记，但本人是键盘手残党，可能不会经常更新，下面是粘贴的Markdown语法，便于查找。"></a>参加了学校的一个网页设计大赛，技术方面全是计院的学长们做的，作为小白的我只能负责内容和素材的收集，我对这个网页设计其实是很感兴趣的，那就现从简单的个人博客开始吧，也会在这个小站上分享一些其他的笔记，但本人是键盘手残党，可能不会经常更新，下面是粘贴的Markdown语法，便于查找。</h2><blockquote>
-<p>本文展示了 <strong>Markdown 的全部常用语法</strong>，可作为速查笔记使用。</p>
-</blockquote>
-<hr>
-<h2 id="1️⃣-标题（Headings）"><a href="#1️⃣-标题（Headings）" class="headerlink" title="1️⃣ 标题（Headings）"></a>1️⃣ 标题（Headings）</h2><p>使用 <code>#</code> 表示标题，数量代表层级。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
-<h2 id="2️⃣-文本格式（Text-Formatting）"><a href="#2️⃣-文本格式（Text-Formatting）" class="headerlink" title="2️⃣ 文本格式（Text Formatting）"></a>2️⃣ 文本格式（Text Formatting）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**加粗文本**</span></span><br><span class="line"><span class="emphasis">*斜体文本*</span></span><br><span class="line">~~删除线文本~~</span><br><span class="line"><span class="strong">**<span class="emphasis">*粗斜体文本*</span>**</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span></span>下划线文本<span class="language-xml"><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">sub</span>&gt;</span></span>下标文本<span class="language-xml"><span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span> 与 <span class="language-xml"><span class="tag">&lt;<span class="name">sup</span>&gt;</span></span>上标文本<span class="language-xml"><span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p><strong>加粗文本</strong><br><em>斜体文本</em><br><del>删除线文本</del><br><em><strong>粗斜体文本</strong></em><br><ins>下划线文本</ins><br>H<sub>2</sub>O 与 E &#x3D; mc<sup>2</sup></p>
-<hr>
-<h2 id="3️⃣-段落与换行（Paragraph-Line-Break）"><a href="#3️⃣-段落与换行（Paragraph-Line-Break）" class="headerlink" title="3️⃣ 段落与换行（Paragraph &amp; Line Break）"></a>3️⃣ 段落与换行（Paragraph &amp; Line Break）</h2><p>段落之间用空行分隔。<br>换行可在行尾加两个空格或使用 <code>&lt;br&gt;</code>。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一行内容  </span><br><span class="line">第二行内容</span><br><span class="line"></span><br><span class="line">这是新段落。</span><br></pre></td></tr></table></figure>
-
-<p>第一行内容<br>第二行内容</p>
-<p>这是新段落。</p>
-<hr>
-<h2 id="4️⃣-引用（Blockquotes）"><a href="#4️⃣-引用（Blockquotes）" class="headerlink" title="4️⃣ 引用（Blockquotes）"></a>4️⃣ 引用（Blockquotes）</h2><p>使用 <code>&gt;</code> 表示引用。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一段引用。</span></span><br><span class="line">&gt;&gt; 可以嵌套引用。</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这是一段引用。</p>
-<blockquote>
-<p>可以嵌套引用。</p>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="5️⃣-列表（Lists）"><a href="#5️⃣-列表（Lists）" class="headerlink" title="5️⃣ 列表（Lists）"></a>5️⃣ 列表（Lists）</h2><h3 id="🔹-无序列表"><a href="#🔹-无序列表" class="headerlink" title="🔹 无序列表"></a>🔹 无序列表</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 项目一</span><br><span class="line"><span class="bullet">-</span> 项目二</span><br><span class="line"><span class="bullet">  -</span> 子项目</span><br><span class="line"><span class="bullet">    -</span> 子子项目</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>项目一</li>
-<li>项目二<ul>
-<li>子项目<ul>
-<li>子子项目</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="🔸-有序列表"><a href="#🔸-有序列表" class="headerlink" title="🔸 有序列表"></a>🔸 有序列表</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br><span class="line"><span class="bullet">   3.</span> 子项一</span><br><span class="line"><span class="bullet">   4.</span> 子项二</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>第一项  </li>
-<li>第二项  <ol start="3">
-<li>子项一  </li>
-<li>子项二</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h2 id="6️⃣-任务列表（Task-Lists）"><a href="#6️⃣-任务列表（Task-Lists）" class="headerlink" title="6️⃣ 任务列表（Task Lists）"></a>6️⃣ 任务列表（Task Lists）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] 已完成事项</span><br><span class="line"><span class="bullet">-</span> [ ] 未完成事项</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 已完成事项  </li>
-<li><input disabled="" type="checkbox"> 未完成事项</li>
-</ul>
-<hr>
-<h2 id="7️⃣-代码（Code）"><a href="#7️⃣-代码（Code）" class="headerlink" title="7️⃣ 代码（Code）"></a>7️⃣ 代码（Code）</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 <span class="code">`print(&quot;Hello&quot;)`</span> 输出。</span><br></pre></td></tr></table></figure>
-
-<p>使用 <code>print(&quot;Hello&quot;)</code> 输出。</p>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>`&#96;&#96;python<br>print(“Hello, world!”)<br>`&#96;&#96;</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="8️⃣-链接（Links）"><a href="#8️⃣-链接（Links）" class="headerlink" title="8️⃣ 链接（Links）"></a>8️⃣ 链接（Links）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line">[<span class="string">带标题的链接</span>](<span class="link">https://www.baidu.com &quot;点击前往百度&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a><br><a target="_blank" rel="noopener" href="https://www.baidu.com/" title="点击前往百度">带标题的链接</a></p>
-<hr>
-<h2 id="9️⃣-图片（Images）"><a href="#9️⃣-图片（Images）" class="headerlink" title="9️⃣ 图片（Images）"></a>9️⃣ 图片（Images）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">描述文字</span>](<span class="link">https://via.placeholder.com/150</span>)</span><br><span class="line">![<span class="string">带标题的图片</span>](<span class="link">https://via.placeholder.com/150 &quot;图片标题&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://via.placeholder.com/150" alt="描述文字"><br><img src="https://via.placeholder.com/150" alt="带标题的图片" title="图片标题"></p>
-<hr>
-<h2 id="🔟-表格（Tables）"><a href="#🔟-表格（Tables）" class="headerlink" title="🔟 表格（Tables）"></a>🔟 表格（Tables）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 姓名 | 年龄 | 职业 |</span><br><span class="line">| :-- | --: | :--: |</span><br><span class="line">| 张三 | 25 | 工程师 |</span><br><span class="line">| 李四 | 30 | 设计师 |</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">姓名</th>
-<th align="right">年龄</th>
-<th align="center">职业</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">张三</td>
-<td align="right">25</td>
-<td align="center">工程师</td>
-</tr>
-<tr>
-<td align="left">李四</td>
-<td align="right">30</td>
-<td align="center">设计师</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>对齐方式说明：</p>
-<ul>
-<li><code>:--</code> 左对齐  </li>
-<li><code>--:</code> 右对齐  </li>
-<li><code>:--:</code> 居中对齐</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="1️⃣1️⃣-分隔线（Horizontal-Rule）"><a href="#1️⃣1️⃣-分隔线（Horizontal-Rule）" class="headerlink" title="1️⃣1️⃣ 分隔线（Horizontal Rule）"></a>1️⃣1️⃣ 分隔线（Horizontal Rule）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<hr>
-<hr>
-<h2 id="1️⃣2️⃣-转义字符（Escapes）"><a href="#1️⃣2️⃣-转义字符（Escapes）" class="headerlink" title="1️⃣2️⃣ 转义字符（Escapes）"></a>1️⃣2️⃣ 转义字符（Escapes）</h2><p>当你想输入 Markdown 保留符号时，在前面加反斜杠 <code>\</code>。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="emphasis">*不会斜体\*</span></span><br><span class="line">\# 不是标题</span><br></pre></td></tr></table></figure>
-
-<p>*不会斜体*<br># 不是标题</p>
-<hr>
-<h2 id="1️⃣3️⃣-脚注（Footnotes）"><a href="#1️⃣3️⃣-脚注（Footnotes）" class="headerlink" title="1️⃣3️⃣ 脚注（Footnotes）"></a>1️⃣3️⃣ 脚注（Footnotes）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Markdown 是一种轻量级标记语言[^1]。</span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">由 John Gruber 创建。</span></span><br></pre></td></tr></table></figure>
-
-<p>Markdown 是一种轻量级标记语言[^1]。<br>[^1]: 由 John Gruber 创建。</p>
-<hr>
-<h2 id="1️⃣4️⃣-数学公式（LaTeX-支持）"><a href="#1️⃣4️⃣-数学公式（LaTeX-支持）" class="headerlink" title="1️⃣4️⃣ 数学公式（LaTeX 支持）"></a>1️⃣4️⃣ 数学公式（LaTeX 支持）</h2><p>行内公式：<code>$E = mc^2$</code><br>块级公式：</p>
-<p>```<br>$$<br>\int_0^\infty e^{-x^2} dx &#x3D; rac{\sqrt{\pi}}{2}<br>$$<br>```</p>
-<p>显示效果：</p>
-<p>$E &#x3D; mc^2$</p>
-<p>$$<br>\int_0^\infty e^{-x^2} dx &#x3D; rac{\sqrt{\pi}}{2}<br>$$</p>
-<hr>
-<h2 id="1️⃣5️⃣-内嵌-HTML"><a href="#1️⃣5️⃣-内嵌-HTML" class="headerlink" title="1️⃣5️⃣ 内嵌 HTML"></a>1️⃣5️⃣ 内嵌 HTML</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color:red;&quot;</span>&gt;</span>这是一段红色文字。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p style="color:red;">这是一段红色文字。</p>
-
-<hr>
-<h2 id="1️⃣6️⃣-折叠内容（Details）"><a href="#1️⃣6️⃣-折叠内容（Details）" class="headerlink" title="1️⃣6️⃣ 折叠内容（Details）"></a>1️⃣6️⃣ 折叠内容（Details）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>点击展开详细内容<span class="language-xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">这里是隐藏的文本。</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<details>
-<summary>点击展开详细内容</summary>
-
-<p>这里是隐藏的文本。</p>
-</details>
-
-<hr>
-<h2 id="1️⃣7️⃣-注释（Comments）"><a href="#1️⃣7️⃣-注释（Comments）" class="headerlink" title="1️⃣7️⃣ 注释（Comments）"></a>1️⃣7️⃣ 注释（Comments）</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 这是一条不会在渲染中显示的注释 --&gt;</span><br></pre></td></tr></table></figure>
-
-<!-- 这是一条不会在渲染中显示的注释 -->
-
-<hr>
-<h2 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h2><p>Markdown 提供了简洁而强大的语法来：</p>
-<ul>
-<li>📄 编写格式化文档  </li>
-<li>🧠 记录学习笔记  </li>
-<li>💻 撰写项目文档或 README</li>
-</ul>
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Airy\'s blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><style>
+  /* 覆盖所有可能的头像动画类 */
+  #avatar, .avatar-img {
+    transition: all 0s !important; /* 禁用所有过渡动画 */
+    transform: rotate(0deg) !important; /* 强制旋转角度为0 */
+  }
+  #avatar:hover, .avatar-img:hover {
+    transform: rotate(0deg) scale(1) !important; /* 禁用悬停旋转和缩放 */
+    animation: none !important; /* 禁用关键帧动画 */
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><span class="site-page group"><span> Category</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/study/"><i class="fa-fw fas fa-folder-open"></i><span> study</span></a></li><li><a class="site-page child" href="/categories/life/"><i class="fa-fw fas fa-folder-open"></i><span> life</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Airy's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><span class="site-page group"><span> Category</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/study/"><i class="fa-fw fas fa-folder-open"></i><span> study</span></a></li><li><a class="site-page child" href="/categories/life/"><i class="fa-fw fas fa-folder-open"></i><span> life</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Airy's blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章"><img class="post-bg" src="https://n.sinaimg.cn/sinakd20101/781/w1920h1261/20230517/b686-753d087cb671c6f1e5c6b1560a376788.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一篇文章"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章">我的第一篇文章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-16T06:00:00.000Z" title="发表于 2025-11-16 14:00:00">2025-11-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%BD%9C/">写作</a></span></div><div class="content">我的第一篇Blog参加了学校的一个网页设计大赛，技术方面全是计院的学长们做的，作为小白的我只能负责内容和素材的收集，我对这个网页设计其实是很感兴趣的，那就现从简单的个人博客开始吧，也会在这个小站上分享一些其他的笔记，但本人是键盘手残党，可能不会经常更新，下面是粘贴的Markdown语法，便于查找。 本文展示了 Markdown 的全部常用语法，可作为速查笔记使用。   1️⃣ 标题（Headings）使用 # 表示标题，数量代表层级。 123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  一级标题二级标题三级标题四级标题五级标题六级标题 2️⃣ 文本格式（Text Formatting）123456**加粗文本***斜体文本*~~删除线文本~~***粗斜体文本***&lt;ins&gt;下划线文本&lt;/ins&gt;&lt;sub&gt;下标文本&lt;/sub&gt; 与 &lt;sup&gt;上标文本&lt;/sup&gt;  加粗文本斜体文本删除线文本粗斜体文本下划线文本H2O 与 E &#x3D; mc2...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/13/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-13T12:17:22.620Z" title="发表于 2025-11-13 20:17:22">2025-11-13</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Airy</div><div class="author-info-description">notebook</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章"><img src="https://n.sinaimg.cn/sinakd20101/781/w1920h1261/20230517/b686-753d087cb671c6f1e5c6b1560a376788.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一篇文章"/></a><div class="content"><a class="title" href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章">我的第一篇文章</a><time datetime="2025-11-16T06:00:00.000Z" title="发表于 2025-11-16 14:00:00">2025-11-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/13/hello-world/" title="Hello World">Hello World</a><time datetime="2025-11-13T12:17:22.620Z" title="发表于 2025-11-13 20:17:22">2025-11-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%BD%9C/"><span class="card-category-list-name">写作</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">教程</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://echosnow.github.io/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="cmi1bwwt8000150ufgn0065ap" data-title="我的第一篇文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
+  
+    <ul class="card-archive-list">
       
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
       
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/11/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2025-11-13T12:17:22.620Z" itemprop="datePublished">2025-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/11/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://echosnow.github.io/2025/11/13/hello-world/" data-id="cmi1bwwt5000050uf0s3q8pg2" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%BD%9C/">写作</a></li></ul></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/11/">十一月 2025</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2025/11/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-          </li>
-        
-          <li>
-            <a href="/2025/11/13/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 Airy<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-16T14:04:34.959Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/bg.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Airy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script async data-pjax src="/"></script></div></body></html>
