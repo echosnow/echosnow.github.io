@@ -169,6 +169,49 @@
   .avatar-img img:hover {
     transform: none !important;
   }
+  
+  /* 优化搜索UI */
+  .search-dialog {
+    border: none !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* 去掉搜索结果序号 */
+  .local-search-hit-item[value]::before {
+    display: none !important;
+  }
+  
+  /* 优化搜索输入框 */
+  .local-search-input input {
+    border-color: var(--text-color) !important;
+    border-width: 1px !important;
+    padding: 10px 18px !important;
+  }
+  
+  /* 优化搜索结果样式 */
+  .local-search-hit-item {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  }
+  
+  .local-search-hit-item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .search-result-title {
+    font-size: 1.1em !important;
+    margin-bottom: 6px !important;
+  }
+  
+  .search-result {
+    font-size: 0.85em !important;
+    opacity: 0.7 !important;
+  }
+  
+  /* 去掉分割线 */
+  .search-dialog hr {
+    display: none !important;
+  }
 </style>
 <meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Airy's blog" type="application/atom+xml">
 </head><body><div id="web_bg" style="background-image: url(/img/bg1.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><span class="site-page group"><span> Category</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories-study/"><i class="fa-fw fas fa-folder-open"></i><span> study</span></a></li><li><a class="site-page child" href="/categories-life/"><i class="fa-fw fas fa-folder-open"></i><span> life</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://n.sinaimg.cn/sinakd20101/781/w1920h1261/20230517/b686-753d087cb671c6f1e5c6b1560a376788.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Airy's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">我的第一篇文章</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><span class="site-page group"><span> Category</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories-study/"><i class="fa-fw fas fa-folder-open"></i><span> study</span></a></li><li><a class="site-page child" href="/categories-life/"><i class="fa-fw fas fa-folder-open"></i><span> life</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我的第一篇文章</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-11-16T06:00:00.000Z" title="发表于 2025-11-16 14:00:00">2025-11-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-16T06:00:00.000Z" title="更新于 2025-11-16 14:00:00">2025-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%BD%9C/">写作</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="我的第一篇Blog"><a href="#我的第一篇Blog" class="headerlink" title="我的第一篇Blog"></a>我的第一篇Blog</h1><blockquote>
