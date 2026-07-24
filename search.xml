@@ -26,20 +26,14 @@
       
       <categories>
           
-          <category> 技术 </category>
-          
-          <category> 写作 </category>
+          <category> article </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> 教程 </tag>
-            
-            <tag> 博客 </tag>
+            <tag> markdown语法 </tag>
             
         </tags>
       
