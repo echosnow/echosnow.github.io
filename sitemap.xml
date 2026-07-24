@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://echosnow.github.io/categories-article/index.html</loc>
+    
+    <lastmod>2026-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://echosnow.github.io/categories-project/index.html</loc>
+    
+    <lastmod>2026-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://echosnow.github.io/about/index.html</loc>
     
     <lastmod>2026-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://echosnow.github.io/categories-life/index.html</loc>
-    
-    <lastmod>2026-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://echosnow.github.io/categories-study/index.html</loc>
-    
-    <lastmod>2026-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
