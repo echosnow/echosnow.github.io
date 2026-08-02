@@ -239,11 +239,16 @@
   #article-container img {
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
   }
   #article-container .img-center {
     text-align: center;
     margin: 1em 0;
+  }
+  /* 覆盖主题的 display:block，让图片可并列 */
+  #article-container .img-center img {
+    display: inline-block !important;
+    margin: 0 6px !important;
+    vertical-align: middle;
   }
   
   /* 添加图片加载时的占位渐变 */
