@@ -235,6 +235,17 @@
     opacity: 1;
   }
   
+  /* 文章正文图片：支持自定义宽度与并列显示 */
+  #article-container img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  #article-container .img-center {
+    text-align: center;
+    margin: 1em 0;
+  }
+  
   /* 添加图片加载时的占位渐变 */
   .recent-post-item .post_cover {
     background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
